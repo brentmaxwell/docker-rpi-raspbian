@@ -10,7 +10,7 @@ outputFile="raspbian-$RELEASE-`date +%Y%m%d%H%M%S`.tar.xz"
 
 (
 	set -x
-	debootstrap --no-check-gpg --arch=armhf --verbose --variant='minbase' --include='iproute,iputils-ping' jessie "$rootfsDir" http://archive.raspbian.org/raspbian/
+	debootstrap --no-check-gpg --arch=armhf --verbose --variant='minbase' --include='iproute,iputils-ping' $RELEASE "$rootfsDir" http://archive.raspbian.org/raspbian/
 )
 
 # now for some Docker-specific tweaks
