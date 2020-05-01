@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -e
+RELEASE="buster"
+
 
 dir="raspbian"
 rootfsDir="raspbian"
-tarFile="raspbian.2015.05.05.tar.xz"
+outputFile="raspbian-$RELEASE-`date +%Y%m%d%H%M%S`.tar.xz"
 ( set -x; mkdir -p "$rootfsDir" )
 
 (
